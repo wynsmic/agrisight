@@ -1,6 +1,6 @@
 import { WriteStream } from "fs";
 import { PrefixValidator } from "./prefix-validator";
-import { Record, RecordType, SingleCharacter } from "../entities/record";
+import { Record, SingleCharacter } from "../entities/record";
 
 export class TextGenerator {
   private writeStream: WriteStream | null;
@@ -26,7 +26,6 @@ export class TextGenerator {
     const record = new Record([]);
     const texts: string[] = [];
     record.initRecord(chars);
-    const lastChar = chars.slice(-1);
     while (record.snapshot() !== chars.slice(-1)[0]) {
       texts.push(record.snapshot());
       record.incrementRecord();

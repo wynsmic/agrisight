@@ -1,5 +1,3 @@
-import { WriteStream } from "fs";
-
 export type SingleCharacter = `${string}`;
 export type RecordType = { char: SingleCharacter; status: 1 | 0 }[];
 

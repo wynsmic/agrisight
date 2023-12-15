@@ -6,11 +6,6 @@ import {
 describe("Class Record", () => {
   describe("Check the initialization a new record", () => {
     it("should get the right first record after init", () => {
-      const chars: CharsType = [
-        { char: "a", status: 1 },
-        { char: "b", status: 0 },
-        { char: "c", status: 0 },
-      ];
       const record = new Record([]);
       record.initRecord(['a', 'b', 'c'])
       expect(record.snapshot()).toEqual("a");
