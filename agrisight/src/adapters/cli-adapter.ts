@@ -13,7 +13,7 @@ export class CLIAdapter {
         const chars: SingleCharacter[] = input.split('') as SingleCharacter[];
         const prefixes = this.textGenerator.getAllPrefixesFromText(chars);
         console.log(prefixes);
-        console.log(prefixes.length);
+        console.log(`End of process. ${prefixes.length} prefixes have been created.`);
         
     }
 }

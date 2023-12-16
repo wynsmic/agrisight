@@ -1,5 +1,5 @@
 export class PrefixValidator {
-  private prefixListsMaxLength = 1;
+  private prefixListsMaxLength = 16;
 
   constructor(maxLength: number) {
     this.prefixListsMaxLength = maxLength;

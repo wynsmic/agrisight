@@ -26,11 +26,10 @@ export class TextGenerator {
     const record = new Record([]);
     const texts: string[] = [];
     record.initRecord(chars);
-    while (record.snapshot() !== chars.slice(-1)[0]) {
+    while (record.hasNext()) {
       texts.push(record.snapshot());
       record.incrementRecord();
     }
-    texts.push(record.snapshot());
     return texts;
   }
 }

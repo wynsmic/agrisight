@@ -17,7 +17,7 @@ For the user convinience, the input prefixes `['c', 'n', 's']` have been preset 
 
 ## limitation
 
-You may easily increase the input prefixes length by modifying the `mains.ts`. By safety due to the complexity of the calculation, any input array above 10 characters will throw an error. This constraint is in place to prevent excessive computational load and potential performance issues.
+You may easily increase the input prefixes length by modifying the `mains.ts`. By safety due to the complexity of the calculation, any input array above 16 characters will throw an error. This constraint is in place to prevent excessive computational load and potential performance issues.
 
 ## Architecture
 
