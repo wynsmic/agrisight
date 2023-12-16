@@ -1,4 +1,4 @@
-import { CLIAdapter } from "./src/application/cli-adapter";
+import { CLIAdapter } from "./src/adapters/cli-adapter";
 import { TextGenerator } from "./src/domain/services/text-generator";
 
 
