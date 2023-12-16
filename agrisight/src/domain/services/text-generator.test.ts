@@ -9,5 +9,11 @@ describe("Class Record", () => {
       const output = textGenerator.getAllPrefixesFromText(suffixes);
       expect(output).toEqual(expectedOutput);
     });
+    it("should return texts array with right length", () => {
+      const suffixes = "abcdefgh".split('');
+      const textGenerator = new TextGenerator();
+      const output = textGenerator.getAllPrefixesFromText(suffixes);
+      expect(output.length).toEqual(255);
+    });
   });
 });

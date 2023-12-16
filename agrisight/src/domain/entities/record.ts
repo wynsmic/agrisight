@@ -66,11 +66,12 @@ export class Record {
       // desactivate the before-last char, ex: 'abcd' => 'ab_d'
       this.setStatusAtIndex(this.chars.length - 2, 0);
     } else if (lastInactive.start > 1) {
-      // move backward the lastInactive.end and reactivate all subsequent ones 'ab_d' => 'a_cd'
+      // move backward the lastInactive.end and reinit all subsequent ones 'ab_d' => 'a_c_'
       this.setStatusAtIndex(lastInactive.start - 1, 0);
-      for (let idx = lastInactive.start; idx < this.chars.length; idx++) {
-        this.setStatusAtIndex(idx, 1);
+      for (let idx = lastInactive.start; idx <= this.chars.length; idx++) {
+        this.setStatusAtIndex(idx, 0);
       }
+      this.setStatusAtIndex(lastInactive.start, 1);
     } else {
       // remove the first character. Then desactivate all characters axecpt the new first one
       this.chars.shift();
